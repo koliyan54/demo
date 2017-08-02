@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<title>Прогноз погоды</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+<script>
+ 
+  $( function() {
+ 
+    $('#getForecast').click( function() {
+      var data = { city: "Васюки", date: "20120318" };
+      $('#forecast').load( "getForecast.html", data );
+    } );
+ 
+  } );
+ 
+</script>
+ 
+</head>
+ 
+<body>
+ 
+<button id="getForecast">Получить прогноз погоды</button>
+<div id="forecast"></div>
+ 
+</body>
+</html>
